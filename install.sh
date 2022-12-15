@@ -77,13 +77,6 @@
 
     mkdir $HOME/rapingmecfg > /dev/null
 
-    # Writing the shortcut script to xbindkeys config 
-
-    awk -v n=3 'NR==FNR{total=NR;next} FNR==total-n+1{exit} 1' $HOME/.xbindkeysrc $HOME/.xbindkeysrc > /dev/null
-
-    echo "\"sh $HOME/rapingmecfg/screenshot\"
-    $shortcutX" | tee -a "$HOME/.xbindkeysrc" > /dev/null
-
     # Checking if the xbindkeys config file exists
 
     xbindkeys -d > $HOME/.xbindkeysrc > /dev/null
@@ -93,6 +86,13 @@
 #    else
 #        xbindkeys -d > ~/.xbindkeysrc
 #    fi
+
+    # Writing the shortcut script to xbindkeys config 
+
+    awk -v n=3 'NR==FNR{total=NR;next} FNR==total-n+1{exit} 1' $HOME/.xbindkeysrc $HOME/.xbindkeysrc > /dev/null
+
+    echo "\"sh $HOME/rapingmecfg/screenshot\"
+    $shortcutX" | tee -a "$HOME/.xbindkeysrc" > /dev/null
 
     echo "##################################
 # End of xbindkeys configuration #
