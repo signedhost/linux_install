@@ -12,7 +12,7 @@ git clone https://github.com/allaboutexhaust/rapingme_install.git
 Then:
 
 ```
-cd rapingme_install && sh install.sh
+cd rapingme_install-master && sh install.sh
 ```
 
 ### Or, install it through curl:
