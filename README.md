@@ -12,7 +12,7 @@ git clone https://github.com/allaboutexhaust/signed_install.git
 Then:
 
 ```
-cd rapingme_install-master && sh install.sh
+cd signed_install && sh install.sh
 ```
 
 ### Or, install it through curl:
