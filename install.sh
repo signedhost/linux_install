@@ -3,7 +3,7 @@
 # This script is a certified and copyrighted property of raping.me
 # Refactoring it without the developer's (exhaust) agreement is prohibited!
 
-# exhaust 2022
+# exhaust 2023
 
 
 # Installation checks (
@@ -58,9 +58,12 @@
     read tokenX
     echo ""
 
-    echo "Okay, now what's your FULL DOMAIN (example: iuse.raping.me [DON'T INCLUDE THE \"HTTPS://\"] )"
-    read domainX
-    echo ""
+    # This became useless due to our api route changes
+
+#   echo "Okay, now what's your FULL DOMAIN (example: iuse.raping.me [DON'T INCLUDE THE \"HTTPS://\"] )"
+#   read domainX
+#   echo ""
+
 # )
 
 # Fetching the screenshot shortcut (
@@ -103,7 +106,7 @@
     echo "#!/bin/sh
 
 token=\"$tokenX\"
-url=\"https://$domainX/index.php\"
+url=\"https://api.signed.host/upload/v2\"
 temp=\"/tmp/image.png\"
 
 flameshot gui -r > \$temp
