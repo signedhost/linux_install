@@ -1,4 +1,4 @@
-# rapingme_install
+# linux_install
 An automatic signed.host installer for linux.
 
 
